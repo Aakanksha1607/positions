@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     .parent{
+        width:500px;
+        height:500px;
+        border:5px solid blueviolet;
+        background-color: rgb(127, 26, 211);
+        position: absolute;
+     }
+     /* By using absolute position,the child will fall on its nearest ancestor i.e parent ..
+     It builds the connection with container so it moves only in the container.It doesnt have document flow.*/
+     .child{
+        width:200px;
+        height:200px;
+        border:3px solid yellowgreen;
+        background-color: rgb(78, 255, 47);
+        position: absolute;
+        bottom:0px;
+        right:0px;
+
+     }
+     p{
+        text-align: center;
+        position: relative;
+        top: 70px;;
+     }
+     p1{ 
+        position:relative;
+        top:240px;
+        left:200px;
+     }
+</style>
+<body>
+    <div class="parent">
+        <p1> PARENT</p1>
+        <div class="child"><p>CHILD</p></div>
+    </div>
+</body>
+</html>
